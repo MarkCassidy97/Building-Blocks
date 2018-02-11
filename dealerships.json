@@ -1,0 +1,58 @@
+{
+  "dealerships": [
+    {
+      "id": 1,
+      "name": "Dealership 1",
+      "city": "Manchester",
+      "region": "North West"
+    },
+    {
+      "id": 2,
+      "name": "Dealership 2",
+      "city": "Newcastle",
+      "region": "North East"
+    },
+    {
+      "id": 3,
+      "name": "Dealership 3",
+      "city": "London",
+      "region": "South East"
+    },
+    {
+      "id": 4,
+      "name": "Dealership 4",
+      "city": "Liverpool",
+      "region": "North West"
+    },
+    {
+      "id": 5,
+      "name": "Dealership 5",
+      "city": "Manchester",
+      "region": "North West"
+    },
+    {
+      "id": 6,
+      "name": "Dealership 6",
+      "city": "Manchester",
+      "region": "North West"
+    },
+    {
+      "id": 7,
+      "name": "Dealership 7",
+      "city": "Liverpool",
+      "region": "North West"
+    },
+    {
+      "id": 8,
+      "name": "Dealership 8",
+      "city": "Chester",
+      "region": "North West"
+    },
+    {
+      "id": 9,
+      "name": "Dealership 9",
+      "city": "Warrington",
+      "region": "North West"
+    }
+  ]
+}

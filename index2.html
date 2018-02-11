@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Building Blocks</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" href="http://unpkg.com/css-grid@1.0.6/css/css-grid.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/javascript.js"></script>
+    <script src="scripts/g-map.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" async defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="Header">
+            <div class="header-text">
+                <h1>Find a motorcycle dealership</h1>
+            </div>
+            <div class="header-text header-text__sub-header-text">
+                <h1>Please enter a postcode, address or location and press search to find the colest dealership.</h1>
+            </div>
+
+            <div class="postcode-lookup">
+                    
+                <input id="address" type="text" placeholder="Enter Postcode" />
+                <div class="button">Search</div>
+                <div class="button">Use my location</div>
+            </div>
+
+        </div>
+
+        <div class="LeftCol">
+            <div class="Square1 address-box">
+                <div class="address-box-number">1</div>
+            </div>
+            <div class="Square2 address-box">
+                <div class="address-box-number">2</div>
+            </div>
+            <div class="Square3 address-box">
+                <div class="address-box-number">3</div>
+            </div>
+            <div class="Square4 address-box">
+                <div class="address-box-number">4</div>
+            </div>
+        </div>
+
+        <div class="RightCol ">
+            <div id="map"></div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="button button__footer">CONTINUE TO NEXT STEP</div>
+
+
+</body>
+
+</html>

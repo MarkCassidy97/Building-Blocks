@@ -1,0 +1,163 @@
+
+
+body {
+  margin: 50px;;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.TopHeader {
+  grid-area: topheader;
+}
+
+.BottomHeader {
+  grid-area: bottomheader;
+}
+
+.Square1 {
+  grid-area: square1;
+}
+
+.Square2 {
+  grid-area: square2;
+}
+
+.Square3 {
+  grid-area: square3;
+}
+
+.Square4 {
+  grid-area: square4;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 250px 800px;
+  align-content: space-around;
+  grid-template-areas: "header header" "leftcol rightcol";
+  grid-row-gap: 50px;
+}
+
+.Header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "topheader" "bottomheader";
+}
+
+.header-text{
+  
+  margin: 0;
+
+ h1 {
+  font-size: 25px;
+ }
+
+
+&__sub-header-text{
+  h1{
+    font-size: 18px;
+    color: grey;
+    font-weight: normal
+  }
+  
+}
+
+}
+
+.LeftCol {
+  grid-area: leftcol;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "square1" "square2" "square3" "square4";
+  
+}
+
+.address-box{
+  border: 1px solid black;
+}
+
+.address-box-number{
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: 10px 0px 0px 10px;
+}
+
+.RightCol {
+  grid-area: rightcol;
+}
+
+
+.button{
+  background-color: black;
+  padding: .5em;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+&__footer{
+  background-color: darkred;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+}
+
+
+
+.image{
+  background-image: url("../image/map-holder.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10vh;
+}
+
+@media screen and (max-width: 800px) { 
+  
+  body{
+    margin: 0 auto;
+  }
+  
+  .container { 
+    grid-template-columns: 100%; 
+    grid-template-rows: 250px 800px 800px; 
+    grid-template-areas: "header" "rightcol" "leftcol"; 
+  }
+  
+  .button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+
+.postcode-lookup{
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+
+
