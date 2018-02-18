@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 body {
   margin: 50px;
   font-family: 'Ubuntu', sans-serif; }
@@ -26,7 +27,11 @@ body {
   grid-template-rows: 250px 800px;
   align-content: space-around;
   grid-template-areas: "header header" "leftcol rightcol";
-  grid-row-gap: 50px; }
+  grid-row-gap: 50px;
+  max-width: 1336px;
+  margin: 0 auto; }
+  .container__form {
+    display: block; }
 
 .Header {
   grid-area: header;
@@ -50,8 +55,14 @@ body {
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: "square1" "square2" "square3" "square4"; }
 
+.Full-width {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%; }
+
 .address-box {
-  border: 1px solid black; }
+  border: 1px solid black;
+  cursor: pointer; }
 
 .address-box-number {
   width: 20px;
@@ -61,6 +72,20 @@ body {
   text-align: center;
   padding: 5px;
   margin: 10px 0px 0px 10px; }
+
+.address-data {
+  margin-left: 15%; }
+
+.address {
+  font-size: 17px; }
+  .address__name p {
+    font-weight: 600; }
+  .address__location {
+    font-weight: 500; }
+
+.address-distance {
+  font-size: 15px;
+  color: darkgray; }
 
 .RightCol {
   grid-area: rightcol; }
@@ -93,10 +118,19 @@ body {
   background-repeat: no-repeat;
   height: 10vh; }
 
-@media screen and (max-width: 800px) {
-  body {
-    margin: 0 auto; }
+#map {
+  height: 100%; }
 
+/* Optional: Makes the sample page fill the window. */
+.postcode-lookup {
+  margin-bottom: 100px; }
+
+.postcode-input {
+  width: 25%;
+  height: 40px;
+  font-size: 1.2em; }
+
+@media screen and (max-width: 800px) {
   .container {
     grid-template-columns: 100%;
     grid-template-rows: 250px 800px 800px;
@@ -106,13 +140,122 @@ body {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100%; } }
-#map {
-  height: 100%; }
+    width: 100%; }
 
-/* Optional: Makes the sample page fill the window. */
-.postcode-lookup {
-  margin-bottom: 100px;
-  text-align: center; }
+  .postcode-input {
+    width: 50%; }
+
+  .postcode-lookup {
+    text-align: center; } }
+.container-test {
+  border-bottom: 1px solid gray; }
+
+.item {
+  font-size: 16px;
+  font-weight: bold; }
+
+.category {
+  font-size: 14px; }
+
+.price {
+  color: #0000ff; }
+
+form {
+  max-width: 100%;
+  margin: 0 auto; }
+  form > .form-input {
+    position: relative;
+    background: white;
+    margin-bottom: 40px; }
+    form > .form-input > label {
+      opacity: 0.3;
+      font-weight: bold;
+      position: absolute;
+      top: 22px;
+      left: 20px; }
+    form > .form-input > select {
+      width: 10%;
+      border: 0;
+      padding: 20px 20px 20px 15px;
+      border: 1px solid #ccc; }
+    form > .form-input > input[type="text"],
+    form > .form-input > input[type="email"],
+    form > .form-input > input[type="number"],
+    form > .form-input > input [type="radio"] {
+      width: 100%;
+      border: 0;
+      padding: 20px 20px 20px 50px;
+      border: 1px solid #ccc; }
+      form > .form-input > input[type="text"]:focus,
+      form > .form-input > input[type="email"]:focus,
+      form > .form-input > input[type="number"]:focus,
+      form > .form-input > input [type="radio"]:focus {
+        outline: 0;
+        background: white; }
+        form > .form-input > input[type="text"]:focus + label,
+        form > .form-input > input[type="email"]:focus + label,
+        form > .form-input > input[type="number"]:focus + label,
+        form > .form-input > input [type="radio"]:focus + label {
+          opacity: 0; }
+      form > .form-input > input[type="text"]:valid,
+      form > .form-input > input[type="email"]:valid,
+      form > .form-input > input[type="number"]:valid,
+      form > .form-input > input [type="radio"]:valid {
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 20px 20px; }
+        form > .form-input > input[type="text"]:valid + label,
+        form > .form-input > input[type="email"]:valid + label,
+        form > .form-input > input[type="number"]:valid + label,
+        form > .form-input > input [type="radio"]:valid + label {
+          opacity: 0; }
+      form > .form-input > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+      form > .form-input > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+      form > .form-input > input[type="number"]:invalid:not(:focus):not(:placeholder-shown),
+      form > .form-input > input [type="radio"]:invalid:not(:focus):not(:placeholder-shown) {
+        background: pink; }
+        form > .form-input > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+        form > .form-input > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+        form > .form-input > input[type="number"]:invalid:not(:focus):not(:placeholder-shown) + label,
+        form > .form-input > input [type="radio"]:invalid:not(:focus):not(:placeholder-shown) + label {
+          opacity: 0; }
+      form > .form-input > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+      form > .form-input > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+      form > .form-input > input[type="number"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+      form > .form-input > input [type="radio"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+        max-height: 200px;
+        padding: 0 30px 20px 50px; }
+    form > .form-input .requirements {
+      padding: 0 30px 0 50px;
+      color: #999;
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: red;
+      font-style: italic; }
+  form .radio {
+    border: 1px solid red;
+    width: fit-content;
+    padding: 5px; }
+  form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #dcdcdc;
+    color: black;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer; }
+
+.contact-title {
+  font-size: 1.5em;
+  color: black;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .contact-title__contact-sub-title {
+    font-size: 1em; }
 
 /*# sourceMappingURL=stylesheet.css.map */
